@@ -59,12 +59,18 @@ a .planet{
 	border: 5px solid #CCCC52;
 	border-left: 0;
 	background-color: #FFFF66;
-	color: #4C331A;
+	color: #8F8A01;
 }
 
 .sun {
 	position: relative;
 	top: 110px;
+	transition: font-size 1s, color 0.8s;
+	font-size: 18px;
+}
+#sun:hover .sun {
+	font-size: 24px;
+	color: #CC9900;
 }
 
 #mercury {
@@ -197,4 +203,33 @@ footer nav li{
 	text-align: left;
 	padding-bottom: 1px;
 	border-bottom: 1px solid black;
+}
+
+/* CSS Animations */
+@-webkit-keyframes flicker {
+	0%, 10%, 20%, 22% {opacity: 0;}
+	2%, 28% {opacity: 0.5;}
+	12%, 44% {opacity: 1;}
+}
+@-moz-keyframes flicker {
+	0%, 10%, 20%, 22% {opacity: 0;}
+	2%, 28% {opacity: 0.5;}
+	12%, 44% {opacity: 1;}
+}
+@-o-keyframes flicker {
+	0%, 10%, 20%, 22% {opacity: 0;}
+	2%, 28% {opacity: 0.5;}
+	12%, 44% {opacity: 1;}
+}
+@keyframes flicker {
+	0%, 10%, 20%, 22% {opacity: 0;}
+	2%, 28% {opacity: 0.5;}
+	12%, 44% {opacity: 1;}
+}
+
+#earth:hover {
+	-webkit-animation: flicker 1s 2;
+	-moz-animation: flicker 1s 2;
+	-o-animation: flicker 1s 2;
+	animation: flicker 1s 2;
 }
